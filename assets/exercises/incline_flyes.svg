@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- bench at 30deg -->
+  <rect x="10" y="62" width="55" height="8" rx="3" fill="#1A1A1A" transform="rotate(-30 10 62)"/>
+  <!-- head -->
+  <circle cx="72" cy="28" r="7" fill="#1A1A1A"/>
+  <!-- torso -->
+  <rect x="38" y="36" width="32" height="10" rx="4" fill="#1A1A1A" transform="rotate(-30 38 36)"/>
+  <!-- arms wide (fly position) -->
+  <line x1="45" y1="36" x2="20" y2="28" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
+  <line x1="55" y1="32" x2="80" y2="24" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
+  <!-- dumbbells at ends -->
+  <rect x="12" y="24" width="10" height="7" rx="2" fill="#1A1A1A"/>
+  <rect x="79" y="20" width="10" height="7" rx="2" fill="#1A1A1A"/>
+</svg>

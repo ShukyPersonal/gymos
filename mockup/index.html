@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Coach Mockup</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .label {
+    color: #888;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .phone {
+    width: 320px;
+    background: #FAFAFA;
+    border-radius: 40px;
+    padding: 48px 0 32px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    overflow: hidden;
+    position: relative;
+    border: 6px solid #333;
+  }
+
+  .phone-inner {
+    padding: 32px 24px 24px;
+  }
+
+  /* block header */
+  .block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .block-label {
+    font-size: 13px;
+    color: #888;
+    font-weight: 500;
+  }
+  .set-badge {
+    background: rgba(45,125,210,0.12);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: #2D7DD2;
+    font-weight: 700;
+  }
+
+  /* superset pills */
+  .superset-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+  .pill {
+    flex: 1;
+    border-radius: 20px;
+    border: 1.5px solid #E8E8E8;
+    padding: 7px 10px;
+    text-align: center;
+    background: #fff;
+    font-size: 11px;
+    color: #888;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .pill.active {
+    background: #1A1A1A;
+    border-color: #1A1A1A;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* exercise name */
+  .exercise-name {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1A1A1A;
+    text-align: center;
+    line-height: 34px;
+    margin-bottom: 18px;
+  }
+
+  /* info card */
+  .info-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #E8E8E8;
+    padding: 14px;
+    margin-bottom: 18px;
+  }
+  .info-muted { font-size: 14px; color: #888; margin-bottom: 4px; }
+  .info-note { font-size: 15px; color: #1A1A1A; font-weight: 500; }
+
+  /* input card */
+  .input-card {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #E8E8E8;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .question { font-size: 18px; font-weight: 600; color: #1A1A1A; margin-bottom: 4px; }
+  .unit { font-size: 14px; font-weight: 400; color: #888; }
+  .num-input {
+    border: 1.5px solid #E8E8E8;
+    border-radius: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1A1A;
+    padding: 12px;
+    margin: 12px 0;
+    text-align: center;
+    width: 100%;
+    background: #FAFAFA;
+  }
+  .primary-btn {
+    background: #1A1A1A;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  /* secondary row */
+  .secondary-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .secondary-btn {
+    flex: 1;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    background: #fff;
+  }
+</style>
+</head>
+<body>
+
+<!-- Screen 1: Weight input -->
+<div>
+  <div class="label">Weight step</div>
+  <div class="phone">
+    <div class="phone-inner">
+
+      <div class="block-header">
+        <span class="block-label">Block A — Push/Pull</span>
+        <span class="set-badge">Set 1/3</span>
+      </div>
+
+      <div class="superset-row">
+        <div class="pill active">Incline Bench Press 30°</div>
+        <div class="pill">Assisted Pull-ups</div>
+      </div>
+
+      <div class="exercise-name">Incline Bench Press 30°</div>
+
+      <div class="info-card">
+        <div class="info-muted">Last: 28kg × 9, 8, 7</div>
+        <div class="info-note">Target: 28kg, aim for ≥9 reps</div>
+      </div>
+
+      <div class="input-card">
+        <div class="question">What weight? <span class="unit">(kg per dumbbell)</span></div>
+        <div class="num-input">28</div>
+        <div class="primary-btn">Next →</div>
+      </div>
+
+      <div class="secondary-row">
+        <div class="secondary-btn">Skip exercise</div>
+        <div class="secondary-btn">End session</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Screen 2: After first set, now on Pull-ups -->
+<div>
+  <div class="label">After logging — next exercise</div>
+  <div class="phone">
+    <div class="phone-inner">
+
+      <div class="block-header">
+        <span class="block-label">Block A — Push/Pull</span>
+        <span class="set-badge">Set 1/3</span>
+      </div>
+
+      <div class="superset-row">
+        <div class="pill">Incline Bench Press 30°</div>
+        <div class="pill active">Assisted Pull-ups</div>
+      </div>
+
+      <div class="exercise-name">Assisted Pull-ups</div>
+
+      <div class="info-card">
+        <div class="info-muted">Last: 14kg × 10, 9, 8</div>
+        <div class="info-note">Target: 14kg, aim for ≥10 reps</div>
+      </div>
+
+      <div class="input-card">
+        <div class="question">What weight? <span class="unit">(kg per dumbbell)</span></div>
+        <div class="num-input">14</div>
+        <div class="primary-btn">Next →</div>
+      </div>
+
+      <div class="secondary-row">
+        <div class="secondary-btn">Skip exercise</div>
+        <div class="secondary-btn">End session</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

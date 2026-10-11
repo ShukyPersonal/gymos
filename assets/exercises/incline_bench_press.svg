@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- bench at 30deg -->
+  <rect x="10" y="62" width="55" height="8" rx="3" fill="#1A1A1A" transform="rotate(-30 10 62)"/>
+  <!-- head -->
+  <circle cx="72" cy="28" r="7" fill="#1A1A1A"/>
+  <!-- torso (lying on incline) -->
+  <rect x="38" y="36" width="32" height="10" rx="4" fill="#1A1A1A" transform="rotate(-30 38 36)"/>
+  <!-- arms pressing up -->
+  <line x1="42" y1="38" x2="30" y2="22" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
+  <line x1="56" y1="34" x2="44" y2="18" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
+  <!-- dumbbell bar -->
+  <line x1="26" y1="19" x2="48" y2="15" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
+  <!-- dumbbell ends -->
+  <rect x="20" y="15" width="8" height="9" rx="2" fill="#1A1A1A"/>
+  <rect x="47" y="11" width="8" height="9" rx="2" fill="#1A1A1A"/>
+</svg>

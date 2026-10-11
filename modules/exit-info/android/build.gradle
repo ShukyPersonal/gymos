@@ -1,0 +1,12 @@
+apply plugin: 'expo-module-gradle-plugin'
+
+group = 'expo.modules.exitinfo'
+version = '1.0.0'
+
+android {
+  namespace "expo.modules.exitinfo"
+  defaultConfig {
+    versionName "1.0.0"
+    versionCode 1
+  }
+}

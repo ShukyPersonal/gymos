@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "name": "Example program (Sep 2026, 2 days/week)",
+  "weight_unit_note": "All weights are PER DUMBBELL (kg). For assisted exercises, weight = how much help the machine gives.",
+  "days_note": "Both days use the same blocks and set counts; only the order differs. Day A trains upper body first, Day B trains legs first so the upper body is fresher for Friday's surf class. src/trainingDay.js picks the day.",
+  "superset_note": "In a superset the exercise with more sets goes first, so advance() never schedules the same exercise twice in a row.",
+  "days": [
+    {
+      "id": "A",
+      "label": "Upper body first",
+      "block_order": ["push_pull", "chest_shoulders", "biceps_abs", "legs"]
+    },
+    {
+      "id": "B",
+      "label": "Legs first",
+      "block_order": ["legs", "biceps_abs", "push_pull", "chest_shoulders"]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "push_pull",
+      "name": "Push/Pull",
+      "type": "superset",
+      "rest_between_exercises_sec": 45,
+      "rest_before_same_exercise_sec": 120,
+      "exercises": [
+        {
+          "id": "assisted_pullups",
+          "name": "Assisted Pull-ups",
+          "sets": 5,
+          "rep_range": [8, 12],
+          "weight_increment": 7,
+          "starting_weight": 14,
+          "assist_mode": true
+        },
+        {
+          "id": "incline_bench_press",
+          "name": "Incline Bench Press 30°",
+          "sets": 4,
+          "rep_range": [6, 10],
+          "weight_increment": 2,
+          "starting_weight": 28,
+          "assist_mode": false
+        }
+      ]
+    },
+    {
+      "id": "chest_shoulders",
+      "name": "Chest/Shoulders",
+      "type": "superset",
+      "rest_between_exercises_sec": 30,
+      "rest_before_same_exercise_sec": 120,
+      "exercises": [
+        {
+          "id": "lateral_raises",
+          "name": "Lateral Raises (standing)",
+          "sets": 4,
+          "rep_range": [12, 15],
+          "weight_increment": 2,
+          "starting_weight": 10,
+          "assist_mode": false
+        },
+        {
+          "id": "incline_flyes",
+          "name": "Incline Chest Flyes 30°",
+          "sets": 3,
+          "rep_range": [10, 12],
+          "weight_increment": 2,
+          "starting_weight": 18,
+          "assist_mode": false
+        }
+      ]
+    },
+    {
+      "id": "biceps_abs",
+      "name": "Biceps/Abs",
+      "type": "superset",
+      "rest_between_exercises_sec": 30,
+      "rest_before_same_exercise_sec": 120,
+      "exercises": [
+        {
+          "id": "hammer_curls",
+          "name": "Hammer Curls (60° incline bench)",
+          "sets": 4,
+          "rep_range": [8, 12],
+          "weight_increment": 2,
+          "starting_weight": 16,
+          "assist_mode": false
+        },
+        {
+          "id": "dragon_flag",
+          "name": "Dragon Flag",
+          "sets": 3,
+          "rep_range": [6, 10],
+          "weight_increment": 0,
+          "starting_weight": 0,
+          "assist_mode": false,
+          "bodyweight": true
+        }
+      ]
+    },
+    {
+      "id": "legs",
+      "name": "Legs",
+      "type": "solo",
+      "rest_between_sets_sec": 90,
+      "exercises": [
+        {
+          "id": "walking_lunges",
+          "name": "Walking Lunges",
+          "sets": 3,
+          "rep_range": [10, 10],
+          "rep_unit": "per leg",
+          "weight_increment": 2,
+          "starting_weight": 6,
+          "assist_mode": false
+        }
+      ]
+    }
+  ]
+}
